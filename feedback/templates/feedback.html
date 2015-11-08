@@ -1,0 +1,15 @@
+<h2>Leave Anonymous Feedback for {{ subject }}</h2>
+
+<div id="messages">
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+</div>
+
+<div id="feedback-form">
+  <form action="{% url 'feedback' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+  </form>
+</div>
