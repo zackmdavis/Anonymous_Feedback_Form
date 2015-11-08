@@ -1,0 +1,10 @@
+__pycache__/
+bin/
+lib/
+lib64
+pip-selfcheck.json
+pyvenv.cfg
+
+.development
+
+db.sqlite3
